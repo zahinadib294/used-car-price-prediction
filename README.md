@@ -30,7 +30,7 @@ Cleaning reduced this to 6,716 records:
 | Random Forest | 0.949 | 67,394 | 105,169 |
 | Random Forest (log-transformed) | 0.941 | 71,298 | 112,862 | 
 | XGBoost | 0.942 | 70,600 | 111,362 |
-| XGBoost (log-transformed) | 0.941 | 72,091 | 116,5223 |
+| XGBoost (log-transformed) | 0.941 | 72,091 | 116,523 |
 
 Log-transforming helped the linear model a lot, but made little difference to
 the tree-based models. A learning curve on the Random Forest showed a training R²
