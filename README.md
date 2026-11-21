@@ -6,7 +6,7 @@ Given a car's age, mileage, engine, power, fuel type, brand and other features,
 how well can we predict its selling price (in Indian rupees)?
 
 ## Data
-8,130 listings with 13 features.
+8,130 listings with 12 features.
 Cleaning reduced this to 6,716 records:
 - 221 rows with missing values dropped (they were missing engine, power, seats
   and mileage together)
@@ -25,12 +25,12 @@ Cleaning reduced this to 6,716 records:
 ## Results
 | Model | R² (test) | MAE(₹) | RMSE(₹) |
 |---|---|---|---|
-| Linear Regression | 0.716 | 130,233 | 246,908 |
+| Linear Regression | 0.717 | 130,233 | 246,908 |
 | Linear Regression (log-transformed) | 0.852 | 102,303 | 178,258 |
 | Random Forest | 0.949 | 67,394 | 105,169 |
 | Random Forest (log-transformed) | 0.941 | 71,298 | 112,862 | 
 | XGBoost | 0.942 | 70,600 | 111,362 |
-| XGBoost (log-transformed) | 0.941 | 72,091 | 116,523 |
+| XGBoost (log-transformed) | 0.937 | 72,091 | 116,523 |
 
 Log-transforming helped the linear model a lot, but made little difference to
 the tree-based models. A learning curve on the Random Forest showed a training R²
