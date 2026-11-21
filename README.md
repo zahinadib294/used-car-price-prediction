@@ -6,7 +6,7 @@ Given a car's age, mileage, engine, power, fuel type, brand and other features,
 how well can we predict its selling price (in Indian rupees)?
 
 ## Data
-8,130 listings with 13 features. [Add the source and link here.]
+8,130 listings with 13 features.
 Cleaning reduced this to 6,716 records:
 - 221 rows with missing values dropped (they were missing engine, power, seats
   and mileage together)
@@ -23,14 +23,14 @@ Cleaning reduced this to 6,716 records:
 - Metrics: R², MAE, RMSE, plus Random Forest out-of-bag score and residual plots
 
 ## Results
-| Model | R² (test) |
-|---|---|
-| Linear Regression | 0.716 |
-| Linear Regression (log-transformed) | 0.852 |
-| Random Forest | 0.949 |
-| Random Forest (log-transformed) | 0.941 |
-| XGBoost | 0.942 (MAE ≈ ₹70,600) |
-| XGBoost (log-transformed) | 0.941 |
+| Model | R² (test) | MAE(₹) | RMSE(₹) |
+|---|---|---|---|
+| Linear Regression | 0.716 | 130,233 | 246,908 |
+| Linear Regression (log-transformed) | 0.852 | 102,303 | 178,258 |
+| Random Forest | 0.949 | 67,394 | 105,169 |
+| Random Forest (log-transformed) | 0.941 | 71,298 | 112,862 | 
+| XGBoost | 0.942 | 70,600 | 111,362 |
+| XGBoost (log-transformed) | 0.941 | 72,091 | 116,5223 |
 
 Log-transforming helped the linear model a lot, but made little difference to
 the tree-based models. A learning curve on the Random Forest showed a training R²
